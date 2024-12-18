@@ -5,34 +5,182 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>โปรไฟล์ของฉัน</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* รีเซ็ตค่าพื้นฐาน */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Georgia", serif;
+        }
+
+        body {
+            background-color: #f4f1e3;
+            color: #3e2723;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        header {
+            background: #d7ccc8;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #8d6e63;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        header nav ul li a {
+            color: #3e2723;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #5d4037;
+        }
+
+        /* เนื้อหาหลัก */
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #f9f7f1;
+            border: 2px solid #8d6e63;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-header {
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 5px solid #8d6e63;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #5d4037;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            margin-top: 1.5rem;
+            font-size: 1.8rem;
+            color: #3e2723;
+            border-bottom: 2px solid #8d6e63;
+            padding-bottom: 0.3rem;
+        }
+
+        p, li {
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 1.5rem;
+        }
+
+        a {
+            color: #6d4c41;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ฟุตเตอร์ */
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #d7ccc8;
+            color: #5d4037;
+            margin-top: 2rem;
+            border-top: 3px solid #8d6e63;
+        }
+
+        .profile-details {
+            padding: 1rem;
+            border: 2px dotted #8d6e63;
+            border-radius: 8px;
+            background-color: #f4ede3;
+        }
+
+    </style>
 </head>
 <body>
+    <!-- ส่วนหัว -->
     <header>
+        <div class="logo">
+            <h2>My Profile</h2>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">หน้าแรก</a></li>
-                <li><a href="profile.html">โปรไฟล์</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- ส่วนเนื้อหาโปรไฟล์ -->
     <main>
         <section class="profile">
-            <h1>โปรไฟล์ของคุณ</h1>
-            <div class="profile-info">
-                <img src="profile-pic.jpg" alt="รูปโปรไฟล์" class="profile-pic">
-                <h2>ชื่อ: สมชาย พงษ์ดี</h2>
-                <p>อายุ: 25 ปี</p>
-                <p>ตำแหน่ง: นักพัฒนาเว็บ</p>
-                <p>เกี่ยวกับ: ฉันรักการพัฒนาเว็บไซต์และการเรียนรู้เทคโนโลยีใหม่ๆ</p>
+            <div class="profile-header">
+                <img src="1.jpg" alt="รูปโปรไฟล์" class="profile-pic">
+                <h1>ธิติสรร สิทธิสาร</h1>
+                <p>นักพัฒนาเว็บ | 20 ปี</p>
+            </div>
+            <div class="profile-details">
+                <h2 id="about">เกี่ยวกับฉัน</h2>
+                <p>รหัสนักศึกษ: 66309010042</p>
+                <p>หลักสูตร: IT.5101 - การพัฒนาเว็บ</p>
+
+                <h2 id="skills">ทักษะของฉัน</h2>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>React, Node.js, Express</li>
+                    <li>การออกแบบ UI/UX</li>
+                    <li>ฐานข้อมูล MySQL, MongoDB</li>
+                    <li>Git, GitHub</li>
+                </ul>
+
+                <h2 id="projects">โครงการที่เคยทำ</h2>
+                <ul>
+                    <li>ระบบจัดการงานภายในองค์กร (ใช้ React และ Node.js)</li>
+                    <li>เว็บไซต์บล็อกส่วนตัว (ใช้ HTML, CSS, JavaScript)</li>
+                    <li>แอปพลิเคชันการจองห้องประชุม (ใช้ React, Express, MongoDB)</li>
+                </ul>
+
+                <h2 id="contact">ติดต่อฉัน</h2>
+                <p>Email: <a href="mailto:stu66309010042@lannapoly.com">stu66309010042@lannapoly.com</a></p>
+                <p>Twitter: <a href="https://twitter.com/somchai" target="_blank">somchai</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/thitissan" target="_blank">Thitissan Sittisan</a></p>
+                <p>GitHub: <a href="https://github.com/thitissan" target="_blank">github.com/thitissan</a></p>
             </div>
         </section>
     </main>
 
+    <!-- ส่วนฟุตเตอร์ -->
     <footer>
-        <p>&copy; 2024 เว็บไซต์ของเรา</p>
+        <p>&copy; 2024 เว็บไซต์ของฉัน | All Rights Reserved</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
